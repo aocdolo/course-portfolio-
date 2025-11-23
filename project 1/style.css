@@ -1,10 +1,13 @@
-/* CSS Variables for color scheme */
+/* CSS Variables */
 :root {
   --primary-color: #0a74da;
   --secondary-color: #e8f1ff;
   --accent-color: #ff6f61;
   --text-color: #003344;
   --card-bg: #ffffff;
+  --btn-bg: #0a74da;
+  --btn-hover: #ff6f61;
+  --btn-text: white;
 }
 
 /* Universal Box-sizing */
@@ -14,53 +17,88 @@
   padding: 0;
 }
 
-/* Body Styling */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--secondary-color);
-  padding: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Header Styling */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+/* Hero Section */
+.hero {
   background-color: var(--primary-color);
   color: white;
+  padding: 80px 20px 40px;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-nav ul {
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn-primary {
+  text-decoration: none;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .btn-primary:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-3px);
+}
+
+/* Hero Navigation */
+.hero-nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-nav a {
-  text-decoration: none;
+.hero-nav a {
   color: white;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
+.hero-nav a:hover {
   color: var(--accent-color);
 }
 
-/* Section Styling */
-section {
-  margin: 40px 0;
-  padding: 20px;
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
 }
 
-/* Skills Section */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Skills */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +110,8 @@ section {
   border: 2px solid var(--primary-color);
   border-radius: 12px;
   padding: 20px;
-  flex: 1 1 200px;
+  flex: 1 1 250px;
+  text-align: center;
   transition: transform 0.3s;
 }
 
@@ -80,7 +119,7 @@ section {
   transform: translateY(-5px);
 }
 
-/* Projects Section */
+/* Projects */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +131,7 @@ section {
   border: 2px solid var(--accent-color);
   border-radius: 12px;
   padding: 15px;
-  flex: 1 1 250px;
+  flex: 1 1 300px;
   text-align: center;
   transition: transform 0.3s;
 }
@@ -106,10 +145,27 @@ section {
   transform: scale(1.05);
 }
 
-/* Footer Styling */
+.btn-secondary {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--btn-text);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-3px);
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   background-color: var(--primary-color);
   color: white;
   margin-top: 40px;
@@ -127,13 +183,13 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
+  .skills-container,
+  .projects-container {
     flex-direction: column;
-    gap: 10px;
   }
 
-  .skills-container, .projects-container {
+  .hero-nav ul {
     flex-direction: column;
+    gap: 15px;
   }
 }
-
