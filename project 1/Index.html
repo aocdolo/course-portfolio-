@@ -8,10 +8,14 @@
 </head>
 <body>
 
-  <!-- Header with Navigation -->
-  <header>
-    <h1>Jeff Dolo</h1>
-    <nav>
+  <!-- Hero Section / Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Jeff Dolo</h1>
+      <p>Computer Science Student | AI & Web Development Enthusiast</p>
+      <a href="#projects" class="btn-primary">View My Work</a>
+    </div>
+    <nav class="hero-nav">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -21,17 +25,15 @@
     </nav>
   </header>
 
-  <!-- Main content -->
   <main>
-
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>Hello! I am a computer science student at the University of Houston. I enjoy learning about AI, web development, and exploring new technologies. My goal is to build meaningful projects that solve real-world problems.</p>
+      <p>Hello! I am a computer science student at the University of Houston. I enjoy AI, web development, and building projects that solve real-world problems. I am passionate about creating accessible and user-friendly digital experiences.</p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Skills & Interests</h2>
       <div class="skills-container">
         <div class="skill-card">
@@ -44,33 +46,35 @@
         </div>
         <div class="skill-card">
           <h3>AI & Machine Learning</h3>
-          <p>Data analysis, neural networks, model building</p>
+          <p>Neural Networks, Data Analysis, Model Building</p>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
           <img src="placeholder1.png" alt="Project 1">
-          <h3>Project Title 1</h3>
-          <p>Description of project 1 goes here.</p>
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio showcasing my work and skills using HTML, CSS, and JavaScript.</p>
+          <a href="#" class="btn-secondary">View Project</a>
         </div>
         <div class="project-card">
           <img src="placeholder2.png" alt="Project 2">
-          <h3>Project Title 2</h3>
-          <p>Description of project 2 goes here.</p>
+          <h3>AI Chatbot</h3>
+          <p>An AI-powered chatbot built with Python to answer common queries and assist users.</p>
+          <a href="#" class="btn-secondary">View Project</a>
         </div>
         <div class="project-card">
           <img src="placeholder3.png" alt="Project 3">
-          <h3>Project Title 3</h3>
-          <p>Description of project 3 goes here.</p>
+          <h3>Data Analysis Dashboard</h3>
+          <p>A dynamic dashboard visualizing datasets with charts and interactive graphs.</p>
+          <a href="#" class="btn-secondary">View Project</a>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- Footer Section -->
@@ -81,4 +85,3 @@
 
 </body>
 </html>
-
