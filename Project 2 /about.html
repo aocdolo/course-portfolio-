@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Your Name</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo">YourName</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link active">About</a>
+        <a href="./projects.html" class="nav-link">Projects</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="about-me">
+      <h1>About Me</h1>
+      <div class="about-grid">
+        <img src="./assets/avatar.jpg" alt="Portrait of Your Name" class="about-avatar" />
+        <div>
+          <p>I’m a web developer passionate about building usable, responsive websites. I enjoy turning complex problems into elegant and accessible solutions.</p>
+          <h2>Experience & Education</h2>
+          <ul>
+            <li>Front-End Developer Intern — Company A (2024)</li>
+            <li>Completed Web Development Course — Institution (2025)</li>
+          </ul>
+          <h2>Tools I Use</h2>
+          <p>VS Code · Git · GitHub · Chrome DevTools · Figma · HTML · CSS · JavaScript</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-about"></span> Your Name</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-about').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
