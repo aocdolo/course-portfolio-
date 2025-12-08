@@ -1,1 +1,156 @@
+/* ===== variables ===== */
+:root{
+  --bg: #f7f7fa;
+  --card: #ffffff;
+  --accent: #0066ff;
+  --accent-2: #ff5a5f;
+  --text: #111;
+  --muted: #666;
+}
+
+/* ===== layout ===== */
+* { box-sizing: border-box; }
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 40px;
+}
+.container{
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,15,20,0.06);
+}
+h1{ margin:0 0 8px 0; font-size: 28px; }
+p{ color: var(--muted); margin-top: 0; }
+
+/* ===== grid for buttons ===== */
+.button-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin: 20px 0 40px 0;
+}
+
+/* ===== base button style (shared) ===== */
+.button-grid button{
+  appearance: none;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #eee;
+  color: var(--text);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+}
+
+/* ================= sample buttons ================= */
+/* Sample 01: Color Swap */
+.button-sample-01{
+  background: linear-gradient(180deg,#0f62fe 0%, #0058e6 100%);
+  color: white;
+  box-shadow: 0 6px 16px rgba(15,98,254,0.18);
+}
+.button-sample-01:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 30px rgba(15,98,254,0.12);
+  filter: saturate(1.05);
+}
+
+/* Sample 02: Raised Shadow */
+.button-sample-02{
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(10,10,20,0.06);
+}
+.button-sample-02:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 22px 40px rgba(10,10,20,0.12);
+  border-color: rgba(0,0,0,0.12);
+}
+
+/* ================= your buttons ================= */
+/* Button 03: Slide Effect (text slides left, bg expands) */
+.button-03{
+  background: linear-gradient(90deg,#ffd166 0%, #ffaf7b 100%);
+  color:#2b2b2b;
+  position: relative;
+  overflow: hidden;
+}
+.button-03::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+  transition: left 0.45s cubic-bezier(.2,.8,.2,1);
+}
+.button-03:hover{
+  transform: translateX(6px);
+  color: white;
+}
+.button-03:hover::after{ left: 0%; }
+
+/* Button 04: Shadow Lift (grow + deeper shadow + subtle rotate) */
+.button-04{
+  background: #fff;
+  border: 1px solid rgba(20,20,30,0.06);
+  box-shadow: 0 6px 12px rgba(20,20,30,0.06);
+}
+.button-04:hover{
+  transform: translateY(-8px) rotate(-0.5deg);
+  box-shadow: 0 30px 60px rgba(20,20,30,0.14);
+  border-color: rgba(0,0,0,0.10);
+}
+
+/* Button 05: Color Fade (background & text crossfade) */
+.button-05{
+  background: linear-gradient(180deg,#e7eefc,#d8e6ff);
+  color: #08306b;
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease;
+}
+.button-05:hover{
+  background: linear-gradient(180deg,#08306b,#0050a2);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* Button 06: Icon Pop (simulate icon with ::before and pop on hover) */
+.button-06{
+  background: linear-gradient(180deg,#e6fffa,#c0fff0);
+  color: #05624a;
+  position: relative;
+  padding-left: 20px;
+}
+.button-06::before{
+  content: "✦";
+  display:inline-block;
+  margin-right: 8px;
+  transform-origin: center;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  opacity: 0.9;
+}
+.button-06:hover{
+  transform: translateY(-6px);
+  color: #01352b;
+}
+.button-06:hover::before{
+  transform: scale(1.6) translateY(-2px);
+  opacity: 1;
+}
+
+/* small responsive tweak */
+@media (max-width:480px){
+  .button-grid{ grid-template-columns: 1fr; }
+}
 
