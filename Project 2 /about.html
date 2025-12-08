@@ -3,58 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — Your Name</title>
+  <title>About — Jeff Dolo</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="logo">YourName</a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="./index.html" class="nav-link">Home</a>
-        <a href="./about.html" class="nav-link active">About</a>
-        <a href="./projects.html" class="nav-link">Projects</a>
-        <a href="./contact.html" class="nav-link">Contact</a>
+      <a href="./index.html" class="logo">JeffDolo</a>
+      <nav class="main-nav">
+        <a href="./index.html">Home</a>
+        <a href="./about.html" class="active">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./contact.html">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
     </div>
   </header>
 
-  <main class="container">
-    <article class="about-me">
-      <h1>About Me</h1>
-      <div class="about-grid">
-        <img src="./assets/avatar.jpg" alt="Portrait of Your Name" class="about-avatar" />
-        <div>
-          <p>I’m a web developer passionate about building usable, responsive websites. I enjoy turning complex problems into elegant and accessible solutions.</p>
-          <h2>Experience & Education</h2>
-          <ul>
-            <li>Front-End Developer Intern — Company A (2024)</li>
-            <li>Completed Web Development Course — Institution (2025)</li>
-          </ul>
-          <h2>Tools I Use</h2>
-          <p>VS Code · Git · GitHub · Chrome DevTools · Figma · HTML · CSS · JavaScript</p>
-        </div>
-      </div>
-    </article>
+  <main class="container about-page">
+    <h1>About Me</h1>
+
+    <p>
+      Hi, I'm <strong>Jeff Dolo</strong> — a 20-year-old entrepreneur and college student passionate about 
+      digital creativity, technology, and problem-solving. I combine tools like Photoshop and modern AI systems 
+      to design visuals, explore new ideas, and build meaningful projects.
+    </p>
+
+    <p>
+      I'm always learning, improving, and experimenting with new software. My goal is to grow my skills, create 
+      digital experiences that stand out, and continue building a strong portfolio of work.
+    </p>
+
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>Photoshop</li>
+      <li>AI Tools</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <ul>
+      <li>Visual design</li>
+      <li>Content creation</li>
+      <li>Entrepreneurship</li>
+      <li>Technology & digital tools</li>
+    </ul>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year-about"></span> Your Name</p>
+      <p>© <span id="year"></span> Jeff Dolo</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year-about').textContent = new Date().getFullYear();
-
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.main-nav');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('nav-open');
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
