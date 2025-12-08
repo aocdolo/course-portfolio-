@@ -1,1 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Jeff Dolo</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="./index.html" class="logo">JeffDolo</a>
+    <nav class="main-nav">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./projects.html" class="active">Projects</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container projects-page">
+  <h1>My Projects</h1>
+  <p>Here are some of the digital projects I’ve worked on. More coming soon.</p>
+
+  <div class="projects-grid">
+
+    <article class="project-card" id="project-one">
+      <img src="./assets/project1.jpg" alt="Project One preview" />
+      <h2>Project One</h2>
+      <p>A sample project showing digital editing and AI-assisted design concepts.</p>
+    </article>
+
+    <article class="project-card" id="project-two">
+      <img src="./assets/project2.jpg" alt="Project Two preview" />
+      <h2>Project Two</h2>
+      <p>A visual concept created using Photoshop and generative AI tools.</p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Jeff Dolo</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 
