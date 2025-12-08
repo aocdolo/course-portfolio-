@@ -3,50 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Professional Portfolio — Home</title>
+  <title>Jeff Dolo — Home</title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="logo">YourName</a>
+      <a href="./index.html" class="logo">JeffDolo</a>
       <nav class="main-nav" aria-label="Primary">
         <a href="./index.html" class="nav-link">Home</a>
         <a href="./about.html" class="nav-link">About</a>
         <a href="./projects.html" class="nav-link">Projects</a>
         <a href="./contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <button class="nav-toggle" aria-expanded="false">Menu</button>
     </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="container hero-grid">
+        
         <div class="hero-text">
-          <h1>Hi — I'm <span class="accent">Your Name</span></h1>
-          <p class="lead">I design and build accessible, responsive websites that help people and businesses shine online.</p>
+          <h1>Hi — I'm <span class="accent">Jeff Dolo</span></h1>
+          <p class="lead">
+            I’m a 20-year-old entrepreneur and college student using Photoshop and modern AI tools 
+            to create digital content and bring ideas to life.
+          </p>
           <p><a class="cta" href="./projects.html">View my work</a></p>
         </div>
+        
         <div class="hero-image">
-          <img src="./assets/avatar.jpg" alt="Portrait of Your Name smiling" />
+          <img src="./assets/avatar.jpg" alt="Portrait of Jeff Dolo smiling" />
         </div>
+
       </div>
     </section>
 
     <section class="skills container">
       <h2>Skills</h2>
       <ul class="skill-list">
-        <li>HTML5 & Semantic Markup</li>
-        <li>CSS3 (Flexbox, Grid, Responsive)</li>
-        <li>JavaScript (DOM, fetch)</li>
-        <li>Version Control with Git & GitHub</li>
+        <li>Photoshop</li>
+        <li>AI Tools</li>
       </ul>
     </section>
 
     <section class="featured container">
       <h2>Featured Projects</h2>
+
       <div class="projects-grid">
+
         <article class="project-card">
           <img src="./assets/project1.jpg" alt="Screenshot of Project One" />
           <h3>Project One</h3>
@@ -60,20 +66,19 @@
           <p>Short description of the project, the tech used, and your role.</p>
           <p><a href="./projects.html#project-two" class="button">Learn more</a></p>
         </article>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Your Name — <a href="./contact.html">Get in touch</a></p>
+      <p>© <span id="year"></span> Jeff Dolo — <a href="./contact.html">Get in touch</a></p>
     </div>
   </footer>
 
   <script>
-    // Small script to set current year and toggle mobile nav
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.main-nav');
     toggle.addEventListener('click', () => {
@@ -82,6 +87,7 @@
       nav.classList.toggle('nav-open');
     });
   </script>
+
 </body>
 </html>
 
